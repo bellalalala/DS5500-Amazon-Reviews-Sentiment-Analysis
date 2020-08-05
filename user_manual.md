@@ -25,7 +25,7 @@ There are three modes of our user interface, **first mode**: not given any comme
 ### 2.2 First mode
 You can just given the department you are interested at by select in the dropdown menu showed in graph below, and also you can provide product ID if you want. Then clikc the **Show Results** to update the information, therefore, you can get the result in **Results Summary** tab.
 
-![](user_guide_utils/first_mode.png | width=300)
+<img src="user_guide_utils/first_mode.png" width=300, height=400>
 
 ### 2.3 Second mode
 You can type any comment you want to classify in the text box (showed in image below) to play with our user interface, by clicking **Show Results** to update information and get a quick summary of prediction results in table showed.
