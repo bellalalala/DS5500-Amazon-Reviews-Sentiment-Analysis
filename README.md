@@ -18,4 +18,8 @@ pip install -r requirements.txt
 For installing fasttext module, check the official documentation(https://fasttext.cc/docs/en/support.html)
 
 ## Notebook
-All code written in jupyter notebook is stored in `notebook/` folder.
+All code written in jupyter notebook is stored in `notebook/` folder. 
+
+`basic EDA.ipynb` contains all code that used in first stage, EDA part, we explore every feature in our dataset, and come out with two problems that we are interested, can we define TRUE customer and how does number of reviews change among the time. 
+
+`Model_Training.ipynb` contains all code that used to train the baseline and fasttext model. The training set and test set data is download from (https://www.kaggle.com/bittlingmayer/amazonreviews)
