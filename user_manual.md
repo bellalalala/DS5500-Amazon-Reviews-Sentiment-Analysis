@@ -25,12 +25,12 @@ There are three modes of our user interface, **first mode**: not given any comme
 ### 2.2 First mode
 You can just given the department you are interested at by select in the dropdown menu showed in graph below, and also you can provide product ID if you want. Then clikc the **Show Results** to update the information, therefore, you can get the result in **Results Summary** tab.
 
-<img src="user_guide_utils/first_mode.png" width=300, height=400>
+<img src="user_guide_utils/first_mode.png" width=300>
 
 ### 2.3 Second mode
 You can type any comment you want to classify in the text box (showed in image below) to play with our user interface, by clicking **Show Results** to update information and get a quick summary of prediction results in table showed.
 
-<img src="user_guide_utils/textbox.png" style="width: 300px">
+<img src="user_guide_utils/textbox.png" width=300>
 
 ### 2.4 Third mode
 After you have a basic idea of how does this UI words, you can try to upload several comments in the upload box. Here is the <a href="user_guide_utils/test.csv">demo test file</a>, first column is the summary of review, second column is the content of reviews. And then click the **Show Results** button, you can see the **summary table**, which shows a summary of prediction result and **processed file**, which contains the prediction results that can be downloaded if you want.
@@ -39,12 +39,12 @@ After you have a basic idea of how does this UI words, you can try to upload sev
 ### 2.5 Input product ID
 This is an optional input we provide, since our dataset contains lots of different products' previous record, if you provide us the product ID, we can search in our database to find any related records and provides the plot. You can check the results correlated to given product ID by click **Learn More** button in **Results Summary** tab. Check the image below to find the location.
 
-<img src="user_guide_utils/learn_more.png" style="width: 200px">
+<img src="user_guide_utils/learn_more.png" width=200>
 
 ### 2.6 Report
 Even though our model performs very well and have a 91% accuracy, there are still some wrong predictions, if you find any error, feel free to use the report function by clicking the **report** button and type the comment that is classified into wrong category. Here is the report window:
 
-<img src="user_guide_utils/report.png" style="width: 300px">
+<img src="user_guide_utils/report.png" width=300>
 
 ## 3. How to use our UI -- Output
 
