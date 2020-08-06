@@ -22,9 +22,9 @@ All code written in jupyter notebook is stored in `notebook/` folder.
 
 `preprocessing.ipynb` contains all code that processing the data before we plotting and training the model, the original data is downloaded from the link we give in the first line.
 
-`basic EDA.ipynb` contains all code that used in first stage, EDA part, we explore every feature in our dataset, and come out with two problems that we are interested, can we define TRUE customer and how does number of reviews change among the time. 
+`descriptive_EDA.ipynb` contains all code that used in first stage, EDA part, we explore every feature in our dataset, and come out with two problems that we are interested, can we define TRUE customer and how does number of reviews change among the time. 
 
-`EDA_Text Related.ipynb` contains all code that used in EDA for review contents. We analyzed the length of reviews and the count of reviews by time for each department as well as the top frequent words in each department. 
+`descriptive_EDA_Text_Related.ipynb` contains all code that used in EDA for review contents. We analyzed the length of reviews and the count of reviews by time for each department as well as the top frequent words in each department. 
 
 `Model_Training.ipynb` contains all code that used to train the baseline and fasttext model. The training set and test set data is download from (https://www.kaggle.com/bittlingmayer/amazonreviews)
 
@@ -50,7 +50,12 @@ Please download them and unzip them to the dashboard_data for the user interface
 
 The user guide of dashboard can be found in `user_manual.md`.
 
-## Release note
+### modeling
+The baseline model is logistic classification. Logistic model needs tokenized and vectorized text data as input so it is time consuming when implement it into user interface.
+The final model used in the user interface is a fasttext model which is faster and more accurate than traditional classification model.
+
+<img src="user_guide_utils/model_comp.png" width=500>
+
 ### Ver 1.0 User Interface
 In settings tab, users can select the target departments and input one comment to get the positive or nagative label for it. All the data i will be updated by clicking on the submit button.
 
@@ -74,6 +79,21 @@ Product id input textbox: users can input their product id if they want the hist
 
 Report button: report button is added for users to report the wrong predictions.
 
+## Changes and Learnings
+### Changes
+The initial thought is to give a comprehensive app for amazon sellers to analyze the comments sentiment and user rating bias. When we started to build the interface, we realized that it is important to make the app straight to the point and easy-to-use. So the final version of this app contains sentiment analysis, rating distribution and various charts that support the sentiment result and rating. Other ideas in the initial thoughts could be extensions for the app.
+
+### Learnings
+**Text analysis**
+* Large dataset TF-IDF calculation
+
+**Dashboard/website building**
+* HTML/CSS properties (no background knowledge)Store data in one callback and use it in another
+* Upload file and download file in dash
+* Design for better user experience
+
+**Thinking from user’s standpoint**
+* Add summarize table to give a more straightforward result
 
 
 
