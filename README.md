@@ -50,7 +50,8 @@ Please download them and unzip them to the dashboard_data for the user interface
 
 The user guide of dashboard can be found in `user_manual.md`.
 
-### modeling
+## Release Note
+### Modeling
 The baseline model is logistic classification. Logistic model needs tokenized and vectorized text data as input so it is time consuming when implement it into user interface.
 The final model used in the user interface is a fasttext model which is faster and more accurate than traditional classification model.
 
