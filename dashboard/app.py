@@ -1,21 +1,14 @@
 # Import required libraries
 from flask import send_from_directory
-# Flask
 import io
 import shutil
 from urllib.parse import quote as urlquote
-# import copy
 import pathlib
 import base64
 import dash
-# import math
-# import sklearn
-# import datetime as dt
 import pandas as pd
-# import numpy as np
 import fastText
 from dash.dependencies import Input, Output, State
-    # , ClientsideFunction
 import dash_core_components as dcc
 import dash_html_components as html
 import dash_daq as daq
@@ -23,12 +16,8 @@ from wordcloud import WordCloud
 from datetime import datetime, timedelta
 import pickle
 import os
-# import dash_table
-# import plotly
 import json
-# import matplotlib.pyplot as plt
 import plotly.graph_objs as go
-# from plotly.offline import plot
 import plotly.express as px
 
 
@@ -44,6 +33,10 @@ app = dash.Dash(
 server = app.server
 app.config["suppress_callback_exceptions"] = True
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
+
+# Load model
+model = fastText.load_model("dashboard_data/model.bin")
+weights_dict = load_obj('dashboard_data/weights_dict.pkl')
 
 # Global Variables that will be used in following functions
 department_list = ['All_Beauty',
@@ -396,10 +389,6 @@ def generate_modal():
         ]
     )
 
-# Load model
-model = fastText.load_model("dashboard_data/model.bin")
-weights_dict = load_obj('dashboard_data/weights_dict.pkl')
-
 
 def build_tabs():
     """Return a html div that contains two tabs: setting and results summary"""
@@ -443,6 +432,8 @@ user_setting = [
                     html.P(
                     "Upload information of your comment."
                     ),
+
+                    # Define the department drop down menu
                     html.Div(
                         id="input-menu",
                         children=[
@@ -459,7 +450,8 @@ user_setting = [
                         ],
                         style={"margin-bottom": "2rem", "margin-top": "5rem"}
                     ),
-
+                    
+                    # Define input box for product ID
                     html.Div(
                         id="product-menu",
                         children=[
@@ -477,6 +469,7 @@ user_setting = [
                 ],
                 style={'float': 'left'}
             ),
+                # Define the upload box and text area for document uploading
                 html.Div(
                     className="two-thirds column",
                     children=[
@@ -520,6 +513,7 @@ user_setting = [
                 )],
         ),
 
+        # Define the Show Results and Report button
         html.Div(
             children=[
                 html.Div(
@@ -644,7 +638,6 @@ build_metrics = html.Div(
                 style={"float": "right"}
             ),
             html.Div(
-            # className="row",
             id="learn-more-content",
             children = [],
             style={"margin-top": "3rem"}
@@ -860,7 +853,7 @@ def draw_chart(label, data, time_period):
     return fig, plot_summary_table(final_data)
 
 
-# update file list
+# Update file list
 @app.callback(
     Output("file-list", "children"),
     [Input("upload-data", "filename"), Input("upload-data", "contents")],
@@ -877,7 +870,7 @@ def update_output(uploaded_filenames, uploaded_file_contents):
 
 
 
-# update processed file list
+# Update processed file list
 @app.callback(
     Output("file-list_processed", "children"),
     [Input("submit-btn", "n_clicks"),Input("value-store", "data")],
