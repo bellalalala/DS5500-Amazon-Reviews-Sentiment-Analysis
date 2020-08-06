@@ -30,6 +30,9 @@ All code written in jupyter notebook is stored in `notebook/` folder.
 
 `Data preparation for user interface.ipynb` contains all code that processing the data before we used them in the user interface. It is important to make our user interface fast and accurate. We decided to pre-precess and pre-calculate the needed data and store it in the user interface folder. 
 
+To use those notebook, first download the dataset in `original/` folder, you can check the README file in that folder for detail information, and run the `preprocessing.ipynb` notebook, then all the processed data will be stored in `data/` folder. 
+
+Then you can run `Model_Training.ipynb` to get saved model file, or you can just download it (https://drive.google.com/file/d/17D1GUAPH61mfHAWHURxlPtVWIkRZacPw/view), and run `Data preparation for user interface.ipynb` to get a subsets of data (or download from https://drive.google.com/file/d/1vwJUazI0SJvfbLMIKPJ0e421A28MOWbl/view?usp=sharing) and a dictionary of weights that will be used to draw word cloud.
 
 ## Dashboard
 All code and necessary file used for dashboard is stored in `dashboard/` file. In order to run the dashboard in your local computer, use following commands:
