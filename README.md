@@ -39,7 +39,9 @@ python app.py
 ```
 folder `dashboard_data/` contains the pre-trained model and a dictionary of weights that used to draw word cloud. 
 The data used can be found in below link:
+
 https://drive.google.com/file/d/1vwJUazI0SJvfbLMIKPJ0e421A28MOWbl/view?usp=sharing
+https://drive.google.com/file/d/17D1GUAPH61mfHAWHURxlPtVWIkRZacPw/view?usp=sharing
 
 Please download them and unzip them to the dashboard_data for the user interface to run.
 
